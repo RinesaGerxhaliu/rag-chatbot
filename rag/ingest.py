@@ -22,13 +22,25 @@ def clean_text(text: str) -> str:
     - Remove null characters
     - Normalize whitespace
     - Normalize newlines
+    - Remove References / Bibliography sections
     """
     if not text:
         return ""
 
     text = text.replace("\x00", " ")
+    reference_patterns = [
+        r"\breferences\b",
+        r"\bbibliography\b"
+    ]
+
+    for pattern in reference_patterns:
+        match = re.search(pattern, text, flags=re.IGNORECASE)
+        if match:
+            text = text[:match.start()]
+
     text = re.sub(r"\s+", " ", text)
     text = re.sub(r"\n+", "\n", text)
+
     return text.strip()
 
 
