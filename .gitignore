@@ -15,3 +15,5 @@ venv/
 .streamlit/
 
 .env
+
+rag/vectorstore/
