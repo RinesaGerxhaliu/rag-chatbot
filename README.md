@@ -22,6 +22,19 @@ This project is developed as part of **Giga Academy Cohort IV – Project #4: RA
 
 ---
 
+## Live Demo
+
+A working demo of the Healthcare RAG Chatbot is available at:
+
+**[https://rag-chatbot-fzjtbcfqkjl7jg2hyqujen.streamlit.app](https://rag-chatbot-fzjtbcfqkjl7jg2hyqujen.streamlit.app)**
+
+The application is deployed using **Streamlit Community Cloud** and demonstrates:
+- Document-grounded question answering
+- Transparent source citations
+- Safe handling of out-of-scope questions (*"I don't know"*)
+
+---
+
 ## Knowledge Base
 
 Curated corpus of ~40 healthcare-related documents
